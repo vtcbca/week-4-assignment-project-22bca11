@@ -1,7 +1,6 @@
 1. Contact management system using sqlite3 and python using user define function.
 
 import sqlite3 as sq
-import datetime
 con = sq.connect("contactmanagementsystem.db")
 cur = con.cursor()
 cur.execute("""create table if not exists contact
@@ -19,7 +18,6 @@ con.close()
 2. CREATING A LOG TABLE
 
 import sqlite3 as sq
-import datetime
 con = sq.connect("contactmanagementsystem.db")
 cur = con.cursor()
 cur.execute("""create table if not exists details_log
@@ -41,7 +39,6 @@ con.close()
 
 
 import sqlite3 as sq
-import datetime
 con = sq.connect("contactmanagementsystem.db")
 cur = con.cursor()
 cur.execute("""create trigger if not exists insertdata
@@ -59,7 +56,6 @@ con.close()
 
 
 import sqlite3 as sq
-import datetime
 con = sq.connect("contactmanagementsystem.db")
 cur = con.cursor()
 cur.execute("""create trigger if not exists deletedata
@@ -76,7 +72,6 @@ con.close()
 5. UPDATE LOG TRIGGER
 
 import sqlite3 as sq
-import datetime
 con = sq.connect("contactmanagementsystem.db")
 cur = con.cursor()
 cur.execute("""create trigger if not exists updatedata
@@ -94,7 +89,6 @@ con.close()
 
 
 import sqlite3 as sq
-import datetime
 con = sq.connect("contactmanagementsystem.db")
 cur = con.cursor()
 def updaterecord(cd):
@@ -119,7 +113,6 @@ con.close()
 7. DISPLAYING RECORDS OF TABLE
 
 import sqlite3 as sq
-import datetime
 con = sq.connect("contactmanagementsystem.db")
 cur = con.cursor()
 cur.execute("select * from contact")
@@ -133,7 +126,6 @@ con.close()
 8. DISPLAYING RECORDS IN LOG TABLE
 
 import sqlite3 as sq
-import datetime
 con = sq.connect("contactmanagementsystem.db")
 cur = con.cursor()
 cur.execute("select * from details_log")
